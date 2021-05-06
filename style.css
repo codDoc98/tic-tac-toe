@@ -61,12 +61,14 @@ body{
 .cell.x::after,
 .cell.circle::before{
     background-color: black;
+    border-radius: 50%;
 }
 
 .board.x .cell:not(.x):not(.circle):hover::before,
 .board.x .cell:not(.x):not(.circle):hover::after,
 .board.circle .cell:not(.x):not(.circle):hover::before{
     background-color: lightgray;
+    border-radius: 50%;
 }
 
 .cell.x::before,
@@ -102,14 +104,14 @@ body{
 
 .cell.circle::before,
 .board.circle .cell:not(.x):not(.circle):hover::before{
-    width: var(--mark-size);
-    height: var(--mark-size);
+    width: calc( var(--mark-size)*0.78);
+    height: calc( var(--mark-size)*0.78);
 }
 
 .cell.circle::after,
 .board.circle .cell:not(.x):not(.circle):hover::after{
-    width:calc( var(--mark-size)*.7);
-    height: calc( var(--mark-size)*.7);
+    width:calc( var(--mark-size)*.56);
+    height: calc( var(--mark-size)*.56);
     background-color: white;
 }
 
